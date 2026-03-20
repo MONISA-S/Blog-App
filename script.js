@@ -1,9 +1,9 @@
 // 🔹 Preloaded posts (everyone sees these by default)
 let posts = JSON.parse(localStorage.getItem("posts")) || [
-  {t:"Role Of Education", c:"Education is very important in everyone’s life. It helps us gain knowledge, improve skills, and build a successful future. Education also helps in making better decisions and becoming a responsible person in society.", img:"", date:new Date().toLocaleDateString()},
-  {t:"Technology Importance", c:"Technology plays an important role in our daily life. It makes communication easy, improves education, and helps in faster work.", img:"", date:new Date().toLocaleDateString()},
-  {t:"College Life", c:"College life is one of the best phases of life. We learn new things, make friends, and build our future.", img:"", date:new Date().toLocaleDateString()},
-  {t:"Time Management", c:"Time management is very important for success. It helps us complete tasks on time, reduce stress, and achieve our goals effectively in both personal and professional life.", img:"", date:new Date().toLocaleDateString()}
+  {t:"Role Of Education", c:"Education is very important in everyone’s life. It helps us gain knowledge, improve skills, and build a successful future. Education also helps in making better decisions and becoming a responsible person in society.", img:"premium_photo-1682125773446-259ce64f9dd7.avif", date:new Date().toLocaleDateString()},
+  {t:"Technology Importance", c:"Technology plays an important role in our daily life. It makes communication easy, improves education, and helps in faster work.", img:"information-technology-background-yj5lntx9lzio3yiz.jpg", date:new Date().toLocaleDateString()},
+  {t:"College Life", c:"College life is one of the best phases of life. We learn new things, make friends, and build our future.", img:"istockphoto-2168908764-612x612.jpg", date:new Date().toLocaleDateString()},
+  {t:"Time Management", c:"Time management is very important for success. It helps us complete tasks on time, reduce stress, and achieve our goals effectively in both personal and professional life.", img:"time-management-business-strategy-saving-260nw-2521622047.webp", date:new Date().toLocaleDateString()}
 ];
 
 // 🔹 Save back to localStorage
