@@ -1,0 +1,2 @@
+# Blog-App
+A simple and responsive blog application built using HTML, CSS, and JavaScript. It allows users to view blog posts on the homepage and click to read full content. An admin login system is implemented to add, edit, and delete posts. A search feature is included to easily find posts. Data is stored using browser local Storage.
