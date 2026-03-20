@@ -1,12 +1,10 @@
-// 🔹 Preloaded posts (everyone sees these by default)
 let posts = JSON.parse(localStorage.getItem("posts")) || [
-  {t:"Role Of Education", c:"Education is very important in everyone’s life. It helps us gain knowledge, improve skills, and build a successful future. Education also helps in making better decisions and becoming a responsible person in society.", img:"images/edu.jpg", date:new Date().toLocaleDateString()},
-  {t:"Technology Importance", c:"Technology plays an important role in our daily life. It makes communication easy, improves education, and helps in faster work.", img:"images/tech.jpg", date:new Date().toLocaleDateString()},
-  {t:"College Life", c:"College life is one of the best phases of life. We learn new things, make friends, and build our future.", img:"images/coll.jpg", date:new Date().toLocaleDateString()},
-  {t:"Time Management", c:"Time management is very important for success. It helps us complete tasks on time, reduce stress, and achieve our goals effectively in both personal and professional life.", img:"images/time.jpg", date:new Date().toLocaleDateString()}
+  {t:"Role Of Education", c:"Education is very important in everyone’s life. It helps us gain knowledge, improve skills, and build a successful future. Education also helps in making better decisions and becoming a responsible person in society.", img:"https://images.pexels.com/photos/414511/pexels-photo-414511.jpeg?auto=compress&cs=tinysrgb&w=600", date:new Date().toLocaleDateString()},
+  {t:"Technology Importance", c:"Technology plays an important role in our daily life. It makes communication easy, improves education, and helps in faster work.", img:"https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600", date:new Date().toLocaleDateString()},
+  {t:"College Life", c:"College life is one of the best phases of life. We learn new things, make friends, and build our future.", img:"https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=600", date:new Date().toLocaleDateString()},
+  {t:"Time Management", c:"Time management is very important for success. It helps us complete tasks on time, reduce stress, and achieve our goals effectively in both personal and professional life.", img:"https://images.pexels.com/photos/955389/pexels-photo-955389.jpeg?auto=compress&cs=tinysrgb&w=600", date:new Date().toLocaleDateString()}
 ];
 
-// 🔹 Save back to localStorage
 localStorage.setItem("posts", JSON.stringify(posts));
 
 let isAdmin = false;
@@ -17,8 +15,6 @@ const content = document.getElementById("content");
 const img = document.getElementById("img");
 const search = document.getElementById("search");
 const adminDiv = document.getElementById("admin");
-
-// 🔐 Admin Login
 function login(){
   let pass = prompt("Enter admin password");
   if(pass && pass.trim() === "admin123"){
@@ -31,7 +27,6 @@ function login(){
   }
 }
 
-// ➕ Add / Save Post
 function savePost(){
   if(!title.value || !content.value){
     alert("Enter title and content");
@@ -55,7 +50,6 @@ function savePost(){
   showPosts();
 }
 
-// 📄 Show posts
 function showPosts(data = posts){
   list.innerHTML = "";
 
@@ -79,12 +73,10 @@ function showPosts(data = posts){
   });
 }
 
-// 👁 View full post
 function viewPost(i){
   alert(posts[i].c);
 }
 
-// ❌ Delete post
 function deletePost(i){
   if(confirm("Are you sure to delete?")){
     posts.splice(i,1);
@@ -93,15 +85,13 @@ function deletePost(i){
   }
 }
 
-// ✏ Edit post
 function editPost(i){
   title.value = posts[i].t;
   content.value = posts[i].c;
   img.value = posts[i].img;
-  deletePost(i); // remove old, will save new on Save
+  deletePost(i); 
 }
 
-// 🔍 Search posts
 search.addEventListener("keyup", function(){
   let value = search.value.toLowerCase();
 
@@ -112,5 +102,4 @@ search.addEventListener("keyup", function(){
   showPosts(filtered);
 });
 
-// 🔹 Initial load
 showPosts();
